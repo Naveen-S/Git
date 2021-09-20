@@ -16,3 +16,80 @@ My Git Journey
     
     - git config --global core.editor "vim/subl -w"
     - git config --global e
+
+
+
+2021 update:
+
+- How to configure your favorite editor with the Git? 
+https://git-scm.com/book/en/v2/Appendix-C%3A-Git-Commands-Setup-and-Config
+
+* commit
+    * `git commit -a -m <msg>`
+       Add all files and commit. 
+
+- Branching in Git:
+    - `git branch` 
+        Shows you a list of branches. 
+    -  `git branch <branch-name>`
+        Create a new branch with that name but you won't to switched/checkedout to that branch.
+    -  `git switch <branch-name>`
+        Takes you to that branch. Similar to checkout.        
+    -  `git switch -c <branch-name>`
+       Create a new branch with that name and switches/checks you out to that branch.
+    - `git branch -d <branch-name>`
+        To delete a branch. 
+    - `git branch -D <branch-name>`
+        To forcefully delete a branch.
+    - `git branch -m <new-name>`
+       To rename the branch you are in. 
+
+- Diff in git
+    - `git diff`
+       Diff between the working directory and staging area.
+    - `git diff HEAD`
+       Difference between working directory and the last commit.
+    - `git diff --staged` / `git diff --cached`
+      Difference between staged area and last commit. 
+    - `git diff <filename>`
+      Targeting specific file change.
+    - `git diff branch1..branch2` / `git diff branch1 branch2`
+       Compare changes between two branches.
+    - `git diff commit1..commit2`
+       Compare changes between commmits.
+    - `git diff HEAD HEAD~1` / `git diff HEAD~1`
+       Compare current HEAD and previous HEAD. or Current commit and the previous commit. 
+
+- Stash
+    - `git stash apply`
+     If you want to apply stashed changes in multiple branches.
+    - `git stash drop stash{2}`
+     If you want to delete a stash, from stash list.
+    - `git stash clear`
+    To clear out the stash list, removes all stashes.
+
+ - Time travel
+    - What is detached head? 
+      When you checkout a commit `git checkout <commit-hash>`,  `HEAD`  pointer will no longer point to a branch instead it points to a commit hash, this is called detached head.
+    - `git checkout HEAD~1` 
+       Accessing parent and grandparent commits, parent (1 commit previous) grandparent(2 commits back). Basically you want to go back one commit or two commit without knowing the commit hash. 
+    - `git checkout -`
+        Switch to previous branch you accessed. 
+    - `git checkout HEAD filename` / `git checkout -- filename` / `git checkout filename` or `git restore filename`
+        To discard the changed made in working directory so that it is now as our HEAD or last commit.
+
+ - Restore
+    - `git restore filename` 
+       Same as `git checkout filename`. But you can do more with git restore.
+    - `git restore --source HEAD~2 filename`
+       File goes back to content of `HEAD~2`.
+   - `git restore --staged filename`
+      To unstage the staged file.
+
+* Aside: 
+    * HEAD is a pointer pointing to the latest commit of the branch you are currently in. 
+    * HEAD in .git folder would be pointing to `refs/heads/<branch-name>`.
+    * Content of `refs/heads/<branch-name>` file would the latest commit hash of that branch `<branch-name>`.
+    * In case of detached head HEAD in .git folder would be pointing to `refs/heads/<commit-hash>`
+    * 
+          
