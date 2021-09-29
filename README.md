@@ -86,10 +86,27 @@ https://git-scm.com/book/en/v2/Appendix-C%3A-Git-Commands-Setup-and-Config
    - `git restore --staged filename`
       To unstage the staged file.
 
+- Reset
+    - `git reset <commit hash>`
+        Say you want to remove couple of commits and go back in time. I.E. If you have 5 commits and decide that you don't need last two commits, you can do `git reset 3rdCommitHash` this will bring back those two commit changes to your working directory, so that you can take that changes elsewhere. 
+    - `git reset --hard <commit hash>`
+       If you don't want those changes in your working directory also.
+
+- Revert
+   - `git revert <commit hash>`
+      Same as `git reset` but it doesn't alter the history instead it create a new commit that undoes the changes you don't need. 
+        Ex: Assume you have 4(A -> B -> C -> D) commit and you decide you don't need the last commit(D), `git reset D` will make the history look like this: 
+        A -> B -> C
+        (altering the history) Which can cause some serious problem if other collaborators already have that commit.
+        Instead we should `git revert D`:
+        A -> B -> c -> D -> D'
+        This create a new commit (D') which undoes the changes of D. 
+        ( Useful link: https://stackoverflow.com/questions/1463340/how-to-revert-multiple-git-commits)    
+
 * Aside: 
     * HEAD is a pointer pointing to the latest commit of the branch you are currently in. 
     * HEAD in .git folder would be pointing to `refs/heads/<branch-name>`.
     * Content of `refs/heads/<branch-name>` file would the latest commit hash of that branch `<branch-name>`.
     * In case of detached head HEAD in .git folder would be pointing to `refs/heads/<commit-hash>`
     * 
-          
+            
