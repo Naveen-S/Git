@@ -103,6 +103,25 @@ https://git-scm.com/book/en/v2/Appendix-C%3A-Git-Commands-Setup-and-Config
         This create a new commit (D') which undoes the changes of D. 
         ( Useful link: https://stackoverflow.com/questions/1463340/how-to-revert-multiple-git-commits)    
 
+- Remote
+    - What's remote? 
+        - Remote is nothing but to say which github/gitLab/bitbucket link in the remote it is connected to.
+            - `git remote -v` (lists the remotes its connected to.) 
+
+- Push
+    - git push <remote> <local-branch>:<remote-branch>
+      git push origin   dog:cat
+        This mean push the content of local branch dog to remote cat.
+        
+    Default behavior is to: git push origin dog
+    This pushes local branch dog to remote dog.    
+    
+- git push by setting upstream
+    git push -u origin dog  --> Sets the upstream to origin dog. 
+    After this `git push` to origin dog by default.
+
+
+
 * Aside: 
     * HEAD is a pointer pointing to the latest commit of the branch you are currently in. 
     * HEAD in .git folder would be pointing to `refs/heads/<branch-name>`.
