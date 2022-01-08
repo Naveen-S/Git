@@ -120,9 +120,36 @@ https://git-scm.com/book/en/v2/Appendix-C%3A-Git-Commands-Setup-and-Config
     git push -u origin dog  --> Sets the upstream to origin dog. 
     After this `git push` to origin dog by default.
 
+- Remote tracking branch
+    Pointer to tell where remote branch is.
+    `git branch -r`
+    
+    
+    - Before making any changes on master branch as soon as you clone. 
+              
+              master
+              |
+    A -> B -> C
+              |
+              origin/master  --> remote tracking branch
 
 
-* Aside: 
+    - After making local commits.
+     
+                        master
+                        |
+    A -> B -> C -> D -> E
+              |
+              origin/master  --> remote tracking branch doesn't move. 
+    (Your branch is ahead of `origin/master` by 2 commits)
+    
+    Once we push master and origin/master will point to same commit.
+    
+    To see content of origin/master --> `git checkout origin/master`
+ 
+ - 
+     
+    * Aside: 
     * HEAD is a pointer pointing to the latest commit of the branch you are currently in. 
     * HEAD in .git folder would be pointing to `refs/heads/<branch-name>`.
     * Content of `refs/heads/<branch-name>` file would the latest commit hash of that branch `<branch-name>`.
