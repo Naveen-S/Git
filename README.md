@@ -125,23 +125,28 @@ https://git-scm.com/book/en/v2/Appendix-C%3A-Git-Commands-Setup-and-Config
     `git branch -r`
     
     
-    - Before making any changes on master branch as soon as you clone. 
-              
+  - Before making any changes on master branch as soon as you clone. 
+  
+   ``` 
               master
               |
     A -> B -> C
               |
               origin/master  --> remote tracking branch
+    ```
 
 
-    - After making local commits.
-     
+  - After making local commits.
+    
+    
+    ```
                         master
                         |
     A -> B -> C -> D -> E
               |
               origin/master  --> remote tracking branch doesn't move. 
     (Your branch is ahead of `origin/master` by 2 commits)
+    ```
     
     Once we push master and origin/master will point to same commit.
     
