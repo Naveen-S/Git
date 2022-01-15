@@ -167,7 +167,9 @@ https://git-scm.com/book/en/v2/Appendix-C%3A-Git-Commands-Setup-and-Config
         - What does Rebase do? 
             - It change the base from original base to tip the new branch for clean git history. Because of this it rewrites history. 
     ![Screenshot_20220115-080957](https://user-images.githubusercontent.com/12951785/149617750-a953ee86-8891-4272-98c2-80ad7caeb408.jpg)
-
+           
+    - When not to use Rebase? 
+      - When a commit is already been shared with someone don't rebase, because Rebase rewrites history.
      
     * Aside: 
     * HEAD is a pointer pointing to the latest commit of the branch you are currently in. 
