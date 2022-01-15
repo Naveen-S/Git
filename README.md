@@ -109,6 +109,8 @@ https://git-scm.com/book/en/v2/Appendix-C%3A-Git-Commands-Setup-and-Config
             - `git remote -v` (lists the remotes its connected to.) 
 
 - Push
+    ![Screenshot_20220108-152808](https://user-images.githubusercontent.com/12951785/149617844-d851e798-bc2d-4c66-85fb-2955c579b122.jpg)
+
     - git push <remote> <local-branch>:<remote-branch>
       git push origin   dog:cat
         This mean push the content of local branch dog to remote cat.
