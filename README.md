@@ -152,7 +152,20 @@ https://git-scm.com/book/en/v2/Appendix-C%3A-Git-Commands-Setup-and-Config
     
     To see content of origin/master --> `git checkout origin/master`
  
- - 
+ - Fork and Clone
+    - You will have 2 remotes one to forked version of the repo.
+    - And second one to original repo from where you forked.
+    
+        - `git remote add upstream <.git clone>`
+    
+   - Rebase
+        - What's Rebase? Rebase is nothing but a mechanism to merge code similar to merge but with merge commits.
+        - Why use Rebase?
+            - If you want a clean git history without merge commits.
+        - What does Rebase do? 
+            - It change the base from original base to tip the new branch for clean git history. Because of this it rewrites history. 
+    ![Screenshot_20220115-080957](https://user-images.githubusercontent.com/12951785/149617750-a953ee86-8891-4272-98c2-80ad7caeb408.jpg)
+
      
     * Aside: 
     * HEAD is a pointer pointing to the latest commit of the branch you are currently in. 
