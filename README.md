@@ -109,7 +109,7 @@ https://git-scm.com/book/en/v2/Appendix-C%3A-Git-Commands-Setup-and-Config
             - `git remote -v` (lists the remotes its connected to.) 
 
 - Push
-    ![Screenshot_20220108-152808](https://user-images.githubusercontent.com/12951785/149617844-d851e798-bc2d-4c66-85fb-2955c579b122.jpg)
+    ![Screenshot_20220108-152808__01](https://user-images.githubusercontent.com/12951785/149866186-34d68038-847a-4e50-941d-581eab0ec7a4.jpg)
 
     - git push <remote> <local-branch>:<remote-branch>
       git push origin   dog:cat
@@ -166,11 +166,63 @@ https://git-scm.com/book/en/v2/Appendix-C%3A-Git-Commands-Setup-and-Config
             - If you want a clean git history without merge commits.
         - What does Rebase do? 
             - It change the base from original base to tip the new branch for clean git history. Because of this it rewrites history. 
-    ![Screenshot_20220115-080957](https://user-images.githubusercontent.com/12951785/149617750-a953ee86-8891-4272-98c2-80ad7caeb408.jpg)
-           
+    ![Screenshot_20220115-080957__01__01](https://user-images.githubusercontent.com/12951785/149866266-e4c96159-632d-4c3b-ad7c-b92452180ce6.jpg)
+
     - When not to use Rebase? 
       - When a commit is already been shared with someone don't rebase, because Rebase rewrites history.
      
+    
+    - Interactive rebase
+        - ![Screenshot_20220115-202729__01](https://user-images.githubusercontent.com/12951785/149865972-aa5b4ed1-fcf7-4ef9-bcf0-9d4389c4a7f8.jpg)
+        
+        - pick - Keep the commit.
+        - reword - Reword the commit. 
+        - fixup - delete a commit message of the commit and meld multiple(continous) commits to previous one.
+        - drop - remove commit.
+    
+    - Tag
+        ![image](https://user-images.githubusercontent.com/12951785/149866980-18bbc6be-ded5-46a0-bbf7-b4faf5c24062.png)
+    
+        - Type of tags
+            - Lightweight Tag: Just the label. 
+            - Annotated Tag: Includes meta data like author name, email date and tagging message.
+    
+        - View Tags
+            - `git tag` : List all the tags.
+            - `git tag -l "*beta*"` : Filter tags based on wild card.
+            
+        - Checking out tag
+            - `git checkout <tagName>`
+                - Note youll be detached head on doing this.
+        
+        - Making lightweight tags
+            - `git tag <tagname>`
+        
+        - Making annotated tags
+            - `git tag -a <tagname>`
+            
+            - How do I see the metadata of the annotated tag? 
+                - `git show <tagname>`
+        
+        - Tagging previous commits
+            - `git tag -a <tagname> <commit>`
+    
+        - Move tag / Force tag
+            - If you want the tag to be moved to different commit use this. We can't have two same tags for two commit.
+            - `git tag <tagname> <commit> -f`
+    
+        - Delete tag
+            - `git tag -d <tagname>`
+    
+        - Push tag
+            - Pushing single tag
+                - `git push <remote> <tagname>`
+            
+            - Pushing all tags
+                - `git push <remote> --tags`
+            
+            
+    
     * Aside: 
     * HEAD is a pointer pointing to the latest commit of the branch you are currently in. 
     * HEAD in .git folder would be pointing to `refs/heads/<branch-name>`.
