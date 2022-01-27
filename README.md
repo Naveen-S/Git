@@ -221,7 +221,39 @@ https://git-scm.com/book/en/v2/Appendix-C%3A-Git-Commands-Setup-and-Config
             - Pushing all tags
                 - `git push <remote> --tags`
             
+     
+    - Internals of Git
+        - .git folder
+            - Important files & folders: `config`,`HEAD`, `refs`, `objects`.
+        
+        - refs
+            - heads
+                - There will be a file for each local branch with content of its last commit.
+            - tags
+                - Similiar to heads, there will a file for each tag created with the content of its commit to which it is pointing. 
+        
+        - HEAD
+            - Reference to the commit which I'm currently in. 
+    
+        - objects
+            - commit
+            - tree
+            - blobs
+            - annotated tags
             
+            - Git uses SHA-1 for generating above hashes. 
+            - Git is a key-value datastore. 
+                ![image](https://user-images.githubusercontent.com/12951785/151353471-ec3725db-a5ea-4d42-8180-5cc48745efc0.png)
+            
+            
+            - Truely internals
+                - Trying Hashing
+                    
+                    - Hashing a text.
+                    ![image](https://user-images.githubusercontent.com/12951785/151353858-e68f6b13-eaea-4839-ad1e-a9c06bacf627.png)
+                    ![image](https://user-images.githubusercontent.com/12951785/151368418-6d4116c8-6be6-4556-b15b-1f629803acc7.png)
+
+                
     
     * Aside: 
     * HEAD is a pointer pointing to the latest commit of the branch you are currently in. 
