@@ -253,7 +253,32 @@ https://git-scm.com/book/en/v2/Appendix-C%3A-Git-Commands-Setup-and-Config
                     ![image](https://user-images.githubusercontent.com/12951785/151353858-e68f6b13-eaea-4839-ad1e-a9c06bacf627.png)
                     ![image](https://user-images.githubusercontent.com/12951785/151368418-6d4116c8-6be6-4556-b15b-1f629803acc7.png)
 
+                    
+                    - Retrieving Hashed data
+                        `git cat-file -p <object-hash>`
+                    
+                    - Hash file
+                        - `git hash-object <file-name>` -w
+                            - `-w` to save the hash in objects.
+                    
+                    - Blobs - Stores file content
+                        ![image](https://user-images.githubusercontent.com/12951785/151499729-64c5fd69-8000-45b8-bbc8-84fdcdc6c51c.png)
+    
+                    - Trees - Stores directory structure
+                        ![image](https://user-images.githubusercontent.com/12951785/151501119-ed9ad5d8-731d-4db0-9dc9-b98f006f622f.png)
+                        ![image](https://user-images.githubusercontent.com/12951785/151501405-4eeadde8-e1bc-46c6-97ca-148c006c550d.png)
+                        ![image](https://user-images.githubusercontent.com/12951785/151501717-5c6e8f30-7e9f-4caf-9acb-3e90a7ba780d.png)
+                        ![image](https://user-images.githubusercontent.com/12951785/151503740-d8fefab0-dffe-4709-8f8c-0cb9f46e9cdc.png)
                 
+                    - Commits
+                        ![image](https://user-images.githubusercontent.com/12951785/151505612-ddc677a2-c463-4f50-98d9-a30d09830621.png)
+                        ![image](https://user-images.githubusercontent.com/12951785/151505939-4b0b58fc-ca67-4bee-abd3-00460db0fd7c.png)
+                        ![image](https://user-images.githubusercontent.com/12951785/151506339-9f623bf8-3cde-4078-be13-9116ac30d9d8.png)
+
+
+
+
+
     
     * Aside: 
     * HEAD is a pointer pointing to the latest commit of the branch you are currently in. 
