@@ -301,7 +301,21 @@ https://git-scm.com/book/en/v2/Appendix-C%3A-Git-Commands-Setup-and-Config
                     
                     - Ex: `git diff master master@{yesterday}`
     
-
+        
+            - Alias
+                In global .gitconfig file. 
+                
+                ```
+                    [alias]
+                        s = status
+                        d = diff
+                    - Usage: 
+                        `git s`
+                        `git d`
+                    
+                        cm = commit -m 
+                        // Note the arguments passed to git commit -m "commit message", will automatically passed. 
+                        Usage: `git cm 'new commit'`
 
     
     * Aside: 
