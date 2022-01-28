@@ -276,7 +276,31 @@ https://git-scm.com/book/en/v2/Appendix-C%3A-Git-Commands-Setup-and-Config
                         ![image](https://user-images.githubusercontent.com/12951785/151506339-9f623bf8-3cde-4078-be13-9116ac30d9d8.png)
 
 
-
+            - Reflogs
+                Git keeps the record of when the tips of the branches and other references were updated in the repo (Locally).
+                `git reflog`
+                
+                - Present in `.git/logs/HEAD`
+                    - Tracks the movement of HEAD.
+    
+                - ![image](https://user-images.githubusercontent.com/12951785/151545110-c0ad7425-9bd4-45a2-9388-3a867d3297b3.png)
+                    - `git reflog show HEAD/<branch-name>`
+                
+                - Reflog references
+                    `name@{qualifier}`
+                    Ex: `git reflog show master@{2}`
+                           - master two moves ago. 
+    
+                        - HEAD@{2} vs HEAD~2
+                            - HEAD@{2} - HEAD two moves ago. 
+                            - HEAD~2 - HEAD two commits ago. 
+    
+                
+                - Timed references
+                    ![image](https://user-images.githubusercontent.com/12951785/151546772-b8fbbcfc-4b87-4da2-9094-b8cb9933fede.png)
+                    
+                    - Ex: `git diff master master@{yesterday}`
+    
 
 
     
